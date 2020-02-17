@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento|Ubuntu|Noto+Sans&display=swap');
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Ubuntu', sans-serif;
+  scroll-behavior: smooth;
+}
+
+#logo {
+  font-family: 'Sacramento', cursive;
+  font-size: 43px;
+  margin: 1rem;
+  color: #956425;
+}
+
+header {
+  position: sticky;
+  position: -webkit-sticky;
+  top:0;
+  z-index: 100;
+}
+
+div#navbar {  
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+div#navbar>ul{
+  display: flex;
+  justify-content: space-around;
+  width: 55%;
+  list-style-type: none;
+  align-items: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+ul>li>a {
+  text-decoration: none;
+  color: #c47979;
+  font-size: 19px;
+}
+
+ul>li>a:hover{
+  color: #455954;
+  text-decoration: underline;
+}
+
+#mobile {
+  display: none;
+}
+
+.line {
+  background-color: #956425;
+  width: 25px;
+  height: 2px;
+  margin-top: 4px;
+}
+
+input#find {
+  font-family: 'Ubuntu', sans-serif;
+  color: #ac5b98;
+  padding-left: 10px;
+  border: none;
+  width: 100%;
+}
+
+main {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+}
+
+#back {
+  position: absolute;
+  z-index: 1;
+  left: 3px;
+  transform: rotateY(180deg);
+}
+
+#next {
+  right: 3px;
+  position: absolute;
+  z-index: 1;
+}
+
+.extends {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  right: 0;
+  background-color: white;
+  width: 35vw;
+  line-height: 3rem;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/*=================== Main ================*/
+.slide>img#slide_image {
+  position: relative;
+  width: 100vw;
+}
+
+ul#type {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  width: 40vw;
+}
+
+#flowers {
+  display: grid;
+  grid-template-columns:auto auto auto auto;
+  grid-gap: 3px;
+  min-height: 1000px;
+}
+
+#products {
+  margin: 50px 0 0 20px;
+}
+
+.products_grid {
+  width: 100%;
+  height: 100%;
+}
+
+/*========= Footer ============*/
+footer#contacts {
+  position: relative;
+  bottom: 0;
+  background-color: black;
+  width: 100%;
+  color: white;
+  padding:1em 0 1em 0;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+  font-family: 'Noto Sans', sans-serif;
+  align-items: center;
+  line-height: 2rem;
+}
+
+a.contact {
+  color: white;
+  font-size: 16px;
+}
+
+/*======== Responsive =======*/
+@media screen and (max-width: 1000px) {
+  ul#type {
+      width: 100vw;
+  }
+
+  footer#contacts {
+    margin-top: 50px;
+  }
+
+  #flowers {
+    grid-template-columns:auto auto;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  div#navbar > ul {
+    display: none;
+  }
+
+  #mobile {
+    display: block;
+  }
+
+  #flowers {
+    grid-template-columns: auto;
+  }
+
+  footer#contacts {
+    display: block;
+    text-align: center;
+  }
+}
+
+
+
