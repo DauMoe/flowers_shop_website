@@ -34,10 +34,10 @@ ul {
   list-style-type: none;
 }
 
-div#navbar>ul{
+div#navbar>ul#main_navbar{
   display: flex;
   justify-content: space-around;
-  width: 55%;
+  width: 45%;
   list-style-type: none;
   align-items: center;
   font-family: 'Ubuntu', sans-serif;
@@ -54,8 +54,8 @@ ul>li>a:hover{
   text-decoration: underline;
 }
 
-#mobile {
-  display: none;
+ul#mobile {
+  display: none !important;
 }
 
 .line {
@@ -176,12 +176,14 @@ a.contact {
 }
 
 @media screen and (max-width: 740px) {
-  div#navbar > ul {
+  div#navbar>ul#main_navbar {
     display: none;
   }
 
-  #mobile {
-    display: block;
+  ul#mobile {
+    display: flex !important;
+    justify-content: space-around;
+    width: 20vw;
   }
 
   #flowers {
